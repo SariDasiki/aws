@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
+gem 'unicorn'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.7.6'
 # Use postgresql as the database for Active Record
@@ -25,6 +27,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
+gem 'aws-sdk-s3', require: false
+
+gem 'dotenv-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -40,6 +46,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "capistrano", "~> 3.10", require: false 
+  gem "capistrano-rails", "~> 1.6", require: false 
+  gem 'capistrano3-unicorn'   
+  gem 'capistrano-safe-deploy-to'
+  gem 'capistrano-rbenv', '~> 2.2'
 end
 
 group :test do
