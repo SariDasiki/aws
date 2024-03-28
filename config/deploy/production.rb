@@ -1,12 +1,12 @@
-server "PublicIP",
+server "18.181.212.75",
    user: "ec2-user",
-   roles: %w{task_app_production},     
+   roles: %w{web app},     
    ssh_options: {
      user: "ec2-user",
-     keys: %w(~/Downloads/dic_sample.pem),
-     forward_agent:false,
-     auth_methods: %w(publickey password)
-   # password: "please use keys"
+      keys: %w{~/.ssh/id_rsa },
+      forward_agent: true,
+    #  auth_methods: %w(publickey)
+  #  password: "please use keys"
    }
 
 # server-based syntax
