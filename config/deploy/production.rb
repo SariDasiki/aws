@@ -1,6 +1,6 @@
-server "18.181.212.75",
+server "52.194.227.248",
    user: "ec2-user",
-   roles: %w{web app},     
+   roles: %w{web app db},     
    ssh_options: {
      user: "ec2-user",
       keys: %w{~/.ssh/id_rsa },
